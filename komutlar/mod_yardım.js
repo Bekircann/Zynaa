@@ -11,7 +11,7 @@ module.exports = {
         .setColor("BLUE")
         .setThumbnail(`${ayarlar.logo}`)
         .setFooter( ayarlar.bot_name, client.user.avatarURL())
-        .setAuthor('BotMaker Sistemi', `${ayarlar.logo}`)
+        .setAuthor('Moderasyon Sistemi', `${ayarlar.logo}`)
        
         .setDescription(`
        
@@ -19,7 +19,7 @@ module.exports = {
        ║
        ${client.commands
        
-         .filter(cmds => cmds.kategori == "yardım")
+         .filter(cmds => cmds.kategori == "moderasyon")
        
          .map(komut => `║ **${ayarlar.prefix}${komut.name}** = ${komut.description || "**Açıklama Eklenmemiş**"}`)
        
@@ -37,9 +37,9 @@ module.exports = {
 
 },
 
-name: "yardim",
-description: "Yardım Komudu",
-aliases: ["yardım"],
-kategori: "",
+name: "mod-yardim",
+description: "Moderasyon Komutlarına Bakarsın",
+aliases: ["mod-yardım"],
+kategori: "yardım",
 usage: "",
 }

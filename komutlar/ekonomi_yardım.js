@@ -11,7 +11,7 @@ module.exports = {
         .setColor("BLUE")
         .setThumbnail(`${ayarlar.logo}`)
         .setFooter( ayarlar.bot_name, client.user.avatarURL())
-        .setAuthor('BotMaker Sistemi', `${ayarlar.logo}`)
+        .setAuthor('Ekonomi Sistemi', `${ayarlar.logo}`)
        
         .setDescription(`
        
@@ -19,7 +19,7 @@ module.exports = {
        ║
        ${client.commands
        
-         .filter(cmds => cmds.kategori == "yardım")
+         .filter(cmds => cmds.kategori == "ekonomi")
        
          .map(komut => `║ **${ayarlar.prefix}${komut.name}** = ${komut.description || "**Açıklama Eklenmemiş**"}`)
        
@@ -37,9 +37,9 @@ module.exports = {
 
 },
 
-name: "yardim",
-description: "Yardım Komudu",
-aliases: ["yardım"],
-kategori: "",
+name: "ekonomi-yardim",
+description: "Ekonomi Komutlarına Bakarsın",
+aliases: ["ekonomi-yardım"],
+kategori: "yardım",
 usage: "",
 }

@@ -6,25 +6,25 @@ const ayarlar = require("../ayarlar.json")
 module.exports = {
     calistir: async(client, message, args) => {
 
+
+
         const embed = new Discord.MessageEmbed()
 
         .setColor("BLUE")
-        .setThumbnail(`${ayarlar.logo}`)
         .setFooter( ayarlar.bot_name, client.user.avatarURL())
-        .setAuthor('BotMaker Sistemi', `${ayarlar.logo}`)
+        .setAuthor('Abone Sistemi', 'https://cdn.discordapp.com/attachments/875119709002023004/902569874080018432/narcos_beta_logo.png')
        
         .setDescription(`
        
-       ╔═══════╣${ayarlar.bot_name}╠══════════
+       ╔═══════╣Narcos Beta╠══════════
        ║
        ${client.commands
        
-         .filter(cmds => cmds.kategori == "yardım")
+         .filter(cmds => cmds.kategori == "abone")
        
-         .map(komut => `║ **${ayarlar.prefix}${komut.name}** = ${komut.description || "**Açıklama Eklenmemiş**"}`)
+         .map(komut => `║  **${ayarlar.prefix}${komut.name}** = ${komut.description || "**Açıklama Eklenmemiş**"}`)
        
          .join('\n')}
-       ║
        ║
        ╚══════════════════════════`)
        .setImage(ayarlar.banner)
@@ -37,9 +37,9 @@ module.exports = {
 
 },
 
-name: "yardim",
-description: "Yardım Komudu",
-aliases: ["yardım"],
-kategori: "",
+name: "aboneyardım",
+description: "Abone komutlarına bakarsın",
+aliases: [],
+kategori: "yardım",
 usage: "",
 }
